@@ -1,0 +1,17 @@
+html, body{
+    background: #f8f9fa!important;
+    height: 100%;
+}
+body{
+    margin-top: 50px;
+}
+.input-group-append button.btn {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+table.table {
+    border: 1px dotted #dee2e6  !important;    
+}
+table.table thead th, .table tr td{
+    border: 1px dotted #dee2e6  !important;    
+}    

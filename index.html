@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login Page - FEE.P.A101 - CMS | TrangPN</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="./css/styles.css" media="screen" charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-md-center">            
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Product</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Quantity/Update</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Discount</th>
+                        <th scope="col">Tax</th>
+                        <th scope="col">Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="product-1" class="item-product">
+                        <td scope="col"><img src="./imgs/1.jpg" width="80" height="80" alt="Thumbnail 1"></td>
+                        <td>
+                                <p>MASSA AST</p>
+                            <p>Color: black, Material: metal</p>
+                        </td>
+                        <td>
+                            <div class="input-group row" style="padding-left: 30px;">
+                                <div class="col-lg-2 col-12" style="padding: 0;">
+                                    <input type="text" class="form-control" placeholder="1" value="1" 
+                                        aria-label="Quantity"
+                                        aria-describedby="button-addon-1"
+                                        id="quantity-1"
+                                        style="border-top-right-radius:0; border-bottom-right-radius:0;">
+                                </div>                                
+                                <div class="input-group-append col-lg-10 col-12" style="padding-left: 0;" id="button-addon-1">
+                                    <button class="btn btn-outline-secondary" type="button" id="btnMinus-1" onclick="funMinus(this.id)"><i class="fa fa-minus"></i></button>
+                                    <button class="btn btn-outline-secondary" type="button" id="btnPlus-1" onclick="funPlus(this.id)"><i class="fa fa-plus"></i></button>
+                                    <button class="btn btn-danger" type="button" id="btnDelete-1" onclick="funRemove(this.id)"><i class="fa fa-times"></i></button>
+                                </div>
+                            </div>                            
+                        </td>
+                        <td>$<span id="price-1"></span></td>
+                        <td>$<span id="discount-1"></span></td>
+                        <td>$<span id="tax-1"></span></td>
+                        <td>$<span id="total-1"></span></td>
+                    </tr>
+                    <tr id="product-2" class="item-product">
+                        <td scope="col"><img src="./imgs/2.jpg" width="80" height="80" alt="Thumbnail 2"></td>
+                        <td>
+                                <p>MASSA AST</p>
+                            <p>Color: black, Material: metal</p>
+                        </td>
+                        <td>
+                            <div class="input-group row" style="padding-left: 30px;">
+                                <div class="col-lg-2 col-12" style="padding: 0;">
+                                    <input type="text" class="form-control" placeholder="1" value="1"
+                                        aria-label="Quantity"
+                                        aria-describedby="button-addon-2"
+                                        id="quantity-2"
+                                        style="border-top-right-radius:0; border-bottom-right-radius:0;">
+                                </div>                                
+                                <div class="input-group-append col-lg-10 col-12" style="padding-left: 0;" id="button-addon-2">
+                                    <button class="btn btn-outline-secondary" type="button" id="btnMinus-2" onclick="funMinus(this.id)"><i class="fa fa-minus"></i></button>
+                                    <button class="btn btn-outline-secondary" type="button" id="btnPlus-2" onclick="funPlus(this.id)"><i class="fa fa-plus"></i></button>
+                                    <button class="btn btn-danger" type="button" id="btnDelete-2" onclick="funRemove(this.id)"><i class="fa fa-times"></i></button>
+                                </div>
+                            </div>                            
+                        </td>
+                        <td>$<span id="price-2"></span></td>
+                        <td><span id="discount-2"></span></td>
+                        <td>$<span id="tax-2"></span></td>
+                        <td>$<span id="total-2"></span></td>                       
+                    </tr>
+                    <tr id="product-3" class="item-product">
+                        <td scope="col"><img src="./imgs/3.jpg" width="80" height="80" alt="Thumbnail 2"></td>
+                        <td>
+                                <p>MASSA AST</p>
+                            <p>Color: black, Material: metal</p>
+                        </td>
+                        <td>
+                            <div class="input-group row" style="padding-left: 30px;">
+                                <div class="col-md-2 col-12" style="padding: 0;">
+                                    <input type="text" class="form-control" placeholder="1" value="1"
+                                        aria-label="Quantity"
+                                        aria-describedby="button-addon-3"
+                                        id="quantity-3"
+                                        style="border-top-right-radius:0; border-bottom-right-radius:0;">
+                                </div>                                
+                                <div class="input-group-append col-md-10 col-12" style="padding-left: 0;" id="button-addon-3">
+                                    <button class="btn btn-outline-secondary" type="button" id="btnMinus-3" onclick="funMinus(this.id)"><i class="fa fa-minus"></i></button>
+                                    <button class="btn btn-outline-secondary" type="button" id="btnPlus-3" onclick="funPlus(this.id)"><i class="fa fa-plus"></i></button>
+                                    <button class="btn btn-danger" type="button" id="btnDelete-3" onclick="funRemove(this.id)"><i class="fa fa-times"></i></button>
+                                </div>
+                            </div>                            
+                        </td>                        
+                        <td>$<span id="price-3"></span></td>
+                        <td>$<span id="discount-3"></span></td>
+                        <td>$<span id="tax-3"></span></td>
+                        <td>$<span id="total-3"></span></td>
+                    </tr>                                        
+                    <tr>                        
+                        <td colspan="6" class="text-right">Total Price:</td>
+                        <td>$<span id="bigTotalPrice"></span></td>
+                    </tr>
+                    <tr>                        
+                        <td colspan="6" class="text-right">Total Discount:</td>
+                        <td>$50</td>
+                    </tr>
+                    <tr>                        
+                        <td colspan="6" class="text-right">Total Tax:</td>
+                        <td>$31</td>
+                    </tr>                                        
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <script src="./js/main.js"></script>
+    
+<script>
+//integer is the value for which we are finding prime factors
+var integer = 4,
+    primeArray = [],
+    isPrime;
+
+//find divisors starting with 2
+
+for(i = 2; i <= integer; i++){
+  if (integer % i==0) {
+
+    //check if divisor is prime
+    let sqrtNum = Math.sqrt(i);
+    for(var j = 2; j <= sqrtNum; j++) {
+      if(i % j == 0) {
+        isPrime = false;
+      } else {
+        isPrime = true;
+      }
+    }
+
+    //if the divisor is prime
+
+    if (isPrime == true) {
+      //divide integer by prime factor & factor store in array primeArray
+      integer /= i
+      primeArray.push(i);
+    }
+  }   
+}
+
+  console.log(primeArray);
+
+
+// let mainAction = factorSum(200);
+// console.log(mainAction);
+</script>
+<script>
+arr.reduce(callback[, initialValue])
+
+</script>
+
+
+</body>
+
+</html>
